@@ -1,0 +1,85 @@
+{
+	"name": "nytro",
+	"version": "0.0.0",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vapejuicejordan/nytro.git"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start -p ${PORT-3000}",
+		"lint": "next lint",
+		"typecheck": "tsc --noEmit",
+		"prettier": "prettier --write \"./src/**/*.{ts,tsx}\"",
+		"prettier:check": "prettier --check \"./src/**/*.{ts,tsx}\"",
+		"prepare": "husky install",
+		"storybook": "start-storybook -p 6006"
+	},
+	"license": "SEE LICENSE IN LICENSE.md",
+	"dependencies": {
+		"@headlessui/react": "^1.7.3",
+		"@hookform/resolvers": "^2.8.8",
+		"@next/bundle-analyzer": "^12.0.10",
+		"class-variance-authority": "^0.2.4",
+		"clsx": "^1.1.1",
+		"date-fns": "^2.28.0",
+		"next": "^12.0.10",
+		"next-seo": "^5.1.0",
+		"next-themes": "^0.0.15",
+		"nprogress": "^0.2.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-hook-form": "^7.25.3",
+		"zod": "^3.11.6"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.19.3",
+		"@storybook/addon-actions": "^6.5.9",
+		"@storybook/addon-essentials": "^6.5.9",
+		"@storybook/addon-interactions": "^6.5.9",
+		"@storybook/addon-links": "^6.5.9",
+		"@storybook/builder-webpack5": "^6.5.9",
+		"@storybook/manager-webpack5": "^6.5.9",
+		"@storybook/react": "^6.5.9",
+		"@tailwindcss/aspect-ratio": "^0.4.0",
+		"@tailwindcss/forms": "^0.4.0",
+		"@tailwindcss/typography": "^0.5.1",
+		"@types/node": "^18.8.5",
+		"@types/nprogress": "^0.2.0",
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11",
+		"autoprefixer": "^10.4.2",
+		"css-loader": "^6.7.1",
+		"dotenv": "^16.0.0",
+		"dotenv-cli": "^4.1.1",
+		"eslint": "^8.8.0",
+		"eslint-config-next": "^12.0.10",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.3",
+		"postcss": "^8.4.6",
+		"postcss-loader": "^7.0.1",
+		"prettier": "^2.5.1",
+		"require-from-string": "^2.0.2",
+		"storybook-addon-next": "^1.6.9",
+		"style-loader": "^3.3.1",
+		"tailwindcss": "^3.0.18",
+		"ts-node": "^10.4.0",
+		"tsconfig-paths": "^3.12.0",
+		"typescript": "^4.5.5",
+		"webpack": "^5.74.0"
+	},
+	"engines": {
+		"node": ">=14"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --cache --fix",
+			"prettier --write"
+		]
+	},
+	"prisma": {
+		"seed": "ts-node --transpile-only -r tsconfig-paths/register ./prisma/seed.ts"
+	}
+}
